@@ -16,7 +16,7 @@ class Controller extends BaseController
         $user = new User();
 
         $user->cn = 'Steve Bauman';
-        $user->givenname = 'Steve';
+        $user->dn = 'Steve';
         $user->sn = 'Bauman';
         $user->company = 'Acme';
         $user->save();
