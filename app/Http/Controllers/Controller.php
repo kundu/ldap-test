@@ -13,14 +13,16 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public function userCreate(){
-        $user = new User();
+        $users = User::where('company', '=', 'iamkundu')->get();
+        dd($users);
+        // $user = new User();
 
-        $user->cn = 'Steve Bauman';
-        $user->dn = 'Steve';
-        $user->sn = 'Bauman';
-        $user->company = 'Acme';
-        $user->save();
+        // $user->cn = 'Steve Bauman';
+        // $user->dn = 'Steve';
+        // $user->sn = 'Bauman';
+        // $user->company = 'Acme';
+        // $user->save();
 
-        dd($user);
+        // dd($user);
     }
 }
