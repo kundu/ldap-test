@@ -14,17 +14,17 @@ class Controller extends BaseController
 
 
     public function userCreate(){
-        $user = User::get();
-
-        dd($user);
-        // $user = new User();
-
-        // $user->cn = 'Steve Bauman';
-        // $user->dn = 'Steve';
-        // $user->sn = 'Bauman';
-        // $user->company = 'Acme';
-        // $user->save();
+        // $user = User::find('cn=jakia apu,ou=web,dc=iamkundu,dc=com');
 
         // dd($user);
+        $user = new User();
+
+        $user->cn = 'Steve Bauman';
+        $user->ou = 'Steve';
+        $user->dc = 'iamkundu';
+        $user->dc = 'com';
+        $user->save();
+
+        dd($user);
     }
 }
