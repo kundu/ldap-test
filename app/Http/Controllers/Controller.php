@@ -12,9 +12,11 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
+
     public function userCreate(){
-        $users = User::where('company', '=', 'iamkundu')->get();
-        dd($users);
+        $user = User::find('cn=jakia apu,ou=web,dc=iamkundu,dc=com');
+
+        dd($user);
         // $user = new User();
 
         // $user->cn = 'Steve Bauman';
