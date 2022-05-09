@@ -14,7 +14,7 @@ class Controller extends BaseController
 
 
     public function userCreate(){
-        $user = User::find('cn=jakia apu,ou=web,dc=iamkundu,dc=com');
+        $user = User::get();
 
         dd($user);
         // $user = new User();
